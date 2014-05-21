@@ -1,0 +1,25 @@
+.generic-content-wrapper {
+background: #$item_colour;
+width: 80% !important;
+opactiy: $opacity;
+}
+
+.directory-item {
+width: 125px !important;
+height: 165px !important;
+overflow: hidden !important;
+}
+
+.pager {
+margin-top: 30px;
+margin-left: auto;
+margin-right: auto;
+width: 60%;
+background-color: #$item_colour;
+opacity: 0.95;
+}
+
+section {left: 250px !important;
+width: auto !important;}
+
+aside {display: block !important;}

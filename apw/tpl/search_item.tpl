@@ -1,0 +1,52 @@
+<div id="thread-wrapper-{{$item.id}}" class="thread-wrapper {{$item.toplevel}}">
+<a name="{{$item.id}}" ></a>
+<div class="wall-item-outside-wrapper {{$item.indent}}{{$item.previewing}}" id="wall-item-outside-wrapper-{{$item.id}}" >
+	<div class="wall-item-content-wrapper {{$item.indent}}{{$item.previewing}}" id="wall-item-content-wrapper-{{$item.id}}" >
+		<div class="wall-item-info" id="wall-item-info-{{$item.id}}">
+			<div class="wall-item-photo-wrapper" id="wall-item-photo-wrapper-{{$item.id}}" 
+				 onmouseover="if (typeof t{{$item.id}} != 'undefined') clearTimeout(t{{$item.id}}); openMenu('wall-item-photo-menu-button-{{$item.id}}')" 
+				 onmouseout="t{{$item.id}}=setTimeout('closeMenu(\'wall-item-photo-menu-button-{{$item.id}}\'); closeMenu(\'wall-item-photo-menu-{{$item.id}}\');',200)">
+				<a href="{{$item.profile_url}}"  title="{{$item.linktitle}}" class="wall-item-photo-link" id="wall-item-photo-link-{{$item.id}}">
+				<img src="{{$item.thumb}}" class="wall-item-photo{{$item.sparkle}}" id="wall-item-photo-{{$item.id}}" style="height: 80px; width: 80px;" alt="{{$item.name}}" /></a>
+				<span onclick="openClose('wall-item-photo-menu-{{$item.id}}');" class="fakelink wall-item-photo-menu-button" id="wall-item-photo-menu-button-{{$item.id}}">menu</span>
+				<div class="wall-item-photo-menu" id="wall-item-photo-menu-{{$item.id}}">
+					<ul>
+						{{$item.item_photo_menu}}
+					</ul>
+				</div>
+			</div>
+			<div class="wall-item-photo-end"></div>	
+		</div>
+		<div class="wall-item-author dropdown">
+
+               {{if $item.lock}}<i class="icon-lock lockview dropdown-toggle" data-toggle="dropdown" title="{{$item.lock}}" onclick="lockview(event,{{$item.id}});" ></i><ul id="panel-{{$item.id}}" class="lockview-panel dropdown-menu"></ul>&nbsp;{{/if}}<a href="{{$item.profile_url}}" title="{{$item.linktitle}}" class="wall-item-name-link"><span class="wall-item-name{{$item.sparkle}}" id="wall-item-name-{{$item.id}}" >{{$item.name}}</span></a>{{if $item.owner_url}} {{$item.via}} <a href="{{$item.owner_url}}" title="{{$item.olinktitle}}" class="wall-item-name-link"><span class="wall-item-name{{$item.osparkle}}" id="wall-item-ownername-{{$item.id}}">{{$item.owner_name}}</span></a>{{/if}}<br />
+                <div class="wall-item-ago"  id="wall-item-ago-{{$item.id}}">{{if $item.verified}}<i class="icon-ok" title="{{$item.verified}}"></i>&nbsp;{{/if}}{{if $item.location}}<span class="wall-item-location" id="wall-item-location-{{$item.id}}">{{$item.location}},&nbsp;</span>{{/if}}<span class="autotime" title="{{$item.isotime}}">{{$item.localtime}}{{if $item.editedtime}} {{$item.editedtime}}{{/if}}{{if $item.expiretime}} {{$item.expiretime}}{{/if}}</span>{{if $item.app}}<span class="item.app">{{$item.str_app}}</span>{{/if}}</div>
+
+		</div>			
+		<div class="wall-item-content" id="wall-item-content-{{$item.id}}" >
+			<div class="wall-item-title" id="wall-item-title-{{$item.id}}">{{$item.title}}</div>
+			<div class="wall-item-title-end"></div>
+			<div class="wall-item-body" id="wall-item-body-{{$item.id}}" >{{$item.body}}</div>
+		</div>
+		<div class="wall-item-tools" id="wall-item-tools-{{$item.id}}">
+			<div class="wall-item-delete-wrapper" id="wall-item-delete-wrapper-{{$item.id}}" >
+				{{if $item.drop.dropping}}<a href="item/drop/{{$item.id}}" onclick="return confirmDelete();" title="{{$item.drop.delete}}" ><i class="icon-remove drop-icons item-tool"></i></a>{{/if}}
+			</div>
+				{{if $item.drop.pagedropping}}<input type="checkbox" onclick="checkboxhighlight(this);" title="{{$item.drop.select}}" class="item-select" name="itemselected[]" value="{{$item.id}}" />{{/if}}
+			<div class="wall-item-delete-end"></div>
+		</div>
+	</div>
+	<div class="wall-item-wrapper-end"></div>
+
+
+	<div class="wall-item-conv" id="wall-item-conv-{{$item.id}}" >
+	{{if $item.conv}}
+			<a href='{{$item.conv.href}}' id='context-{{$item.id}}' title='{{$item.conv.title}}'>{{$item.conv.title}}</a>
+	{{/if}}
+	</div>
+
+<div class="wall-item-outside-wrapper-end {{$item.indent}}" ></div>
+
+</div>
+</div>
+

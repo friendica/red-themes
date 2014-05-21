@@ -1,0 +1,16 @@
+section {
+	left: auto;
+	width: auto;
+	position: auto;
+	display: block;
+}
+
+nav {
+height: 24px;
+display: block;
+position: fixed;
+width: 100%;
+z-index: 100;
+background-color: #000;
+}
+

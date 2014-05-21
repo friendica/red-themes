@@ -1,0 +1,40 @@
+section {
+left: 250px !important;
+width: 75% !important;
+}
+
+aside {display: block !important;}
+
+[class^="icon-"],
+[class*="icon-"] {
+font-family: FontAwesome !important;
+}
+
+#prvmail-submit-wrapper,
+#prvmail-attach-wrapper,
+#prvmail-link-wrapper {
+        float: left;
+        margin-top: 10px;
+        margin-right: 30px;
+}
+
+#mail-list-wrapper {
+
+border-bottom: 1px solid #ccc;
+padding: 20px;
+}
+
+span.mail-list {
+float: left;
+width: 20%;
+}
+
+span.mail-delete {
+float: left;
+width: 30px;
+}
+
+img.mail-list-sender-photo {
+height: 24px;
+width: 24px;
+}

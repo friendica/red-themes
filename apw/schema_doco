@@ -1,0 +1,126 @@
+A schema, in a nutshell, is a collection of settings for a bunch of variables to define
+certain elements of a theme.  A schema is loaded as though it were part of config.php
+and has access to all the same information.  Importantly, this means it is identity aware,
+and can be used to do some interesting things.  One could, for example, restrict options
+by service class, or present different options to different users.
+
+By default, we filter only by whether or not expert mode is enabled.  If expert mode is 
+enabled, all options are presented to the user.  If it is not, only scheme, background
+image, font face, and iconset are available as choices.
+
+A schema is loaded *after* the user settings.  Therefore, to allow a user to overwrite a
+particular aspect of a schmea you would use the following syntax:
+		
+		if (! $foo)
+			$foo = 'bar';
+
+However, there are circumstances - particularly with the positional elements - where it
+may be desirable (or necessary) to override a users settings.  In this case, the syntax
+is even simpler:
+
+			$foo = 'bar';
+
+Users will not thank you for this, however, so only use it when it is required.
+
+If no user options are set, and no schema is selected, we will first try to load a schema
+with the file name "default.php".  This is where you define the default settings for your
+hub as a whole.  If this file is not set, we will still set sane defaults. This file is not 
+shipped with APW in the interests of avoiding merge conflicts.  
+
+The canonical default schema is darkness.php.  Any bugs should be tested with this schema 
+first, in order to determine whether we're dealing with a theme bug or a schema bug.
+
+You schema does not need to - and should not - contain all of these values.  Only the values
+that differ from the defaults should be listed.  This gives you some very powerful options
+with very few lines of code.
+
+The full list of available options is as follows:
+
+
+$line_height
+	Sets the line_height element.  Only used inside items.
+$apw_font_size
+	Sets the size of the font.  Applied to body, this affects most, but not all, font sizes.
+$font
+	Set the font face.  This menu is autopopulated from the contents of font/ in which the TTF
+	or WOFF must be provided.  Some websafe defaults are provided.
+$iconpath
+	Set the path for icons.  By default, there is a set in img/ and a set in img/tango/  Obviously, 
+	these fonts must be included with the schema.
+$item_colour
+	The background colour to use with items.  This can be a hex or an RGB value.
+$link_colour	
+	The colour used for links.  This includes the fakelink class and similar.
+	Can be a hex or RGB value.
+$background
+	The body background image.  This must be a path to a file name.  The string replacement occurs
+	within url(' ');  To set null (as the default settings include a background) set to ---
+	Several textures are included as standard in img/
+$bgcolour
+	Set the background colour.  This is useless if a background image is set.  If a background
+	image is not set, the body background will be this colour.  Accepts a hex or RGB value.
+$sectionbackground	
+	Set a background image for the section element.  It is possible, but not recommended, to use
+	this in conjunction with the body background image.  It follows the same rules as the background
+	image - use a full path or url the file location.
+$sectioncolour
+	Set the background colour of the section element.  If sectionbackground is set, this element
+	will be useless.
+$font_colour
+	Set the colour of fonts in body.  This affects most, but not all fonts.  Hex or RGB values.
+$bigshadow
+	Set the size of large shadows.  Large shadows are used primarily in top level
+	posts.  Example syntax: 15px 15px 15px
+$smallshadow
+	Set the size of small shadows.  Small shadows are used in many places, primarily
+	in comment items.  Example, 5px 5px 5px #000
+$shadowcolour
+	Set the colour to be used in shadows.  Accepts a hex value.  Possibly (untested) RGB.
+$radius
+	Set the radius of corners.  Mostly used in items, but also photos and tabs.
+	Accepts a size.  Example, 5px
+$symmetry
+	Archaic.  The symmetry setting actually allows "previews".  This feature is unsupported at the
+	moment, and should probably be considered deprecated.  Use with care.
+$aisde
+	Whether or not to display the side bar on the channel and network page.  Options are on, off
+	and tagonly.  Tagonly displays only the tagcloud element in the sidebar.  This is useful for
+	channels that use tags as navigation.
+$scaling
+	Set the background-size element of images.
+$opacity
+	Level of opacity to use in items.  0 makes them completely transparent.  1 makes them unopaque
+$nav
+	Set the colour of the navigation bar.  Options are red, pink, green, blue, purple, black, orange,
+	brown, grey, gold.  One can also set gradients, or a range of colours by setting $nav1 and $nav2 
+	with gradient values in hex instead.  To do this, one must NOT define $nav to one of the above 
+	options.  
+$width
+	Set the width of items.  Accepts measures as a percentage or px
+	The default is 400px, but note this is insufficient to hold many embedded videos.
+$minwidth
+	Similar to width, one can also set a minimum width to prevent posts from becoming too small
+$gcrwidth 
+	Generic Conentent Wrapper width.  This wrapper is used in many places.  Most places that have
+	a wrapper, other than items, use the generic content wrapper.  Accepts a measure in either 
+	absolute (123px) or percentage (50%) terms.
+$itemfloat
+	Set the float attribute for items.  Options are left, right, or none.
+	
+	**********************************************************
+	* WARNING - playing with these values causes headaches   *
+	**********************************************************
+This lot should probaby be done with Comanche, but we can't do
+it with Comanche yet.
+
+$sectionleft
+	Set the left element for the section (section#region_2).  That is, decide how many pixels from the left 
+	it will	appear.  Note this is only applicable to network and channel pages.
+$sectionright
+	As above, but for the right.
+$sectionwidth
+	Set the width of the section.  Can be a percentage or pixels.
+$asideleft
+	As sectionleft, but for the sidebar (aside#region_1).
+$asideright
+	As sectionright	but for the sidebar

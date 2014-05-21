@@ -1,0 +1,32 @@
+.chat-name{
+width: 20%;
+float:left;
+}
+
+.chat-text{
+float: left;
+}
+
+.generic-content-wrapper {
+padding-top: 0px !important;
+padding-bottom: 0px !important;
+margin-left: 0pt !important;
+margin-right: 150px !important;
+width: auto !important;
+}
+
+img {
+max-width: 95%;
+}
+
+section {
+left: 250px !important; 
+width: 80% !important;
+}
+
+aside {display: block !important;
+width: 250px;
+background: #000;
+opacity: 0.95;
+border-radius: 5px;}
+
