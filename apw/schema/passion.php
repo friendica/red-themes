@@ -2,7 +2,7 @@
  	if (! $apw_font_size)
 		$apw_font_size = '12px';
 	if (! $background)
-		$background = "../img/abstractred.jpg";
+		$background = "../img/backgrounds/abstractred.jpg";
 	if (! $bgcolour)
 		$bgcolour = "#dd0";
 	if (! $item_colour)

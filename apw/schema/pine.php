@@ -2,7 +2,7 @@
 	if (! $font)
 		$font = 'tscu-comic.ttf';
 	if (! $background)
-		$background = "../img/woodbg.jpg";
+		$background = "../img/backgrounds/woodbg.jpg";
  	if (! $apw_font_size)
 		$apw_font_size = '16px';
 	if (! $item_colour)

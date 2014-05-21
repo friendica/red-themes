@@ -116,7 +116,7 @@
 	if (! $link_colour)
 		$link_colour = '#0080ff';
 	if (! $background)
-		$background = "../img/black.jpg";
+		$background = "../img/backgrounds/black.jpg";
 	if (! $bgattach)
 		$bgattach = 'scroll';
 	if (! $bgcolour)
