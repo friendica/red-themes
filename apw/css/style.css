@@ -3914,3 +3914,16 @@ div.dirtagblock.widget {
                 width: 180px;
                 opacity: $opacity;
 }
+
+button.install {
+    background-image: url(../img/install.png); 
+    background-color: transparent; 
+    background-repeat: no-repeat;  
+    background-position: 0px 0px;  
+    border: none;           
+    cursor: pointer;        
+    height: 48px;
+    padding-left: 48px;
+    vertical-align: middle; 
+}
+
