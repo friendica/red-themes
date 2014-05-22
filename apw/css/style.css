@@ -3934,25 +3934,21 @@ button.edit-app {
 	background-position: -80px 0px;
 	background-color: transparent; 
 	background-repeat: no-repeat;  
-	background-position: 0px 0px;  
 	border: none;           
 	cursor: pointer;        
 	height: 16px;
-	padding-left: 16px;
 	vertical-align: middle; 
 }
 
 button.delete-app {
 	background-image: url('../img/$iconpath/icons.png');
 	background-position: -48px 0px;
-	background-position: -80px 0px;
 	background-color: transparent; 
 	background-repeat: no-repeat;  
-	background-position: 0px 0px;  
 	border: none;           
 	cursor: pointer;        
 	height: 16px;
-	padding-left: 16px;
 	vertical-align: middle; 
 }
+
 
