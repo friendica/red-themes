@@ -9,9 +9,9 @@
 <form action="appman" method="post">
 <input type="hidden" name="papp" value="{{$app.papp}}" />
 
-{{if $install}}<button type="submit" name="install" value="{{$install}}" class="install" title="{{$install}}" ></button>{{/if}}
-{{if $edit}}<input type="hidden" name="appid" value="{{$app.guid}}" /><button type="submit" name="edit" value="{{$edit}}" class="btn btn-default" title="{{$edit}}" ><i class="icon-pencil" ></i></button>{{/if}}
-{{if $delete}}<button type="submit" name="delete" value="{{$delete}}" class="btn btn-default" title="{{$delete}}" ><i class="icon-remove drop-icons"></i></button>{{/if}}
+{{if $install}}<button type="submit" name="install" value="{{$install}}" class="install-app" title="{{$install}}" ></button>{{/if}}
+{{if $edit}}<input type="hidden" name="appid" value="{{$app.guid}}" /><button type="submit" name="edit" value="{{$edit}}" class="edit-app" title="{{$edit}}" ></button>{{/if}}
+{{if $delete}}<button type="submit" name="delete" value="{{$delete}}" class="delete-app" title="{{$delete}}" ></button>{{/if}}
 </form>
 {{/if}}
 </div>
