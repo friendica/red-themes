@@ -1,0 +1,13 @@
+.app-container {
+	float: left;
+	width: 120px;
+	padding: 20px;
+}
+
+/* Comment out to see why.  If you've got
+a better idea, go for it */
+.generic-content-wrapper {
+width: 640px !important;
+}
+
+nav {display: none !important;}
