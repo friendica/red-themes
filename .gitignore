@@ -1,0 +1,34 @@
+favicon.*
+.htconfig.php
+\#*
+include/jquery-1.4.2.min.js
+*.log
+*.out
+*.version*
+home.html
+addon
+*~
+compiled/
+
+# patch attempts
+*.orig
+*.rej
+
+
+#ignore documentation, it should be newly built 
+doc/api
+
+#ignore reports, should be generted with every build
+report/
+
+#ignore config files from eclipse, we don't want IDE files in our repository
+.project
+.buildpath
+.externalToolBuilders
+.settings
+
+#ignore OSX .DS_Store files 
+.DS_Store
+
+#netbeans project folder
+nbproject
