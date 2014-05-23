@@ -1,16 +1,18 @@
 .app-container {
 	float: left;
 	width: 125px;
+	height: 125px;
 	padding: 20px;
 }
 
 /* Comment out to see why.  If you've got
 a better idea, go for it */
 .generic-content-wrapper {
-width: 640px !important;
+width: 680px !important;
 }
 
 nav {display: none !important;}
+div#banner {display: none !important;}
 
 section {
 left: 250px !important;
@@ -35,4 +37,16 @@ ul {
 
 .widget h3 {
 	display: none;
+}
+
+h1 {
+	font-size: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 175px;
+	padding: 10px;
+	background: #000;
+	opacity: 0.95;
+	border-radius: 5px;
+	box-shadow: 5px 5px 5px #000;
 }
