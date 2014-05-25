@@ -30,10 +30,10 @@ if (ref != "") {land(loc,target);}
 	<div id="categories-sidebar-desc">{{$desc}}</div>
 	
 	<a href="{{$base}}" class="categories-link categories-all{{if $sel_all}} categories-selected{{/if}}">{{$all}}</a>
-	<form action="dummy" method="post"><select name="choice" size="1" onChange="jump(this.form)">
+	<form action="{{$action}}" method="post"><select name="choice" size="1" onChange="jump(this.form)">
 		{{foreach $terms as $term}}
 	<option value="{{$base}}?f=&cat={{$term.name}}" class="categories-link{{if $term.selected}} categories-selected{{/if}}">{{$term.name}}</option>
 		{{/foreach}}
 	</select>
-	
+	</form>
 </div>
