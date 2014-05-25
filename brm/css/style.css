@@ -194,6 +194,24 @@ div [id^="g"] {
 .icon-thumbs-up-alt {
 	margin-left: -5px;
 }
+.mail-list  {
+	font-size: 0.9em;
+}
+.mail-list ~ .mail-list {
+	width: 10%;
+}
+.mail-list ~ .mail-list ~ .mail-list {
+	width: 40%;
+}
+
+.mail-list ~ .mail-list ~ .mail-list ~ .mail-list {
+	width: 35%;
+}
+.mail-list ~ .mail-list ~ .mail-list ~ .mail-list ~ .mail-list {
+	width: 3%;
+	float: right;
+
+}
 .thread-wrapper {
 	border: 1px solid #cccccc;
 }
