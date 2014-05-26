@@ -202,26 +202,78 @@ img {
 	font-size: 0.9em;
 	overflow: none;
 }
+#mail-list-wrapper.generic-content-wrapper.seen {
+	border-top: none;	
+	border-bottom: 1px solid #cccccc;
+
+}
+#mail-list-wrapper.generic-content-wrapper.unseen {
+	background-color: #cccccc;
+	border-bottom: 1px solid white;
+	border-top: none;	
+}
+
 .mail-list ~ .mail-list {
-	width: 80%;
+	width: 50%;
+	float: left;
+	font-weight: bold;
+	font-size: 0.9em;
 }
 .mail-list ~ .mail-list ~ .mail-list {
-	width: 50%;
+	width: 5%;
+	float: right;
+	text-align: right;
+	font-weight: normal;
 }
+.mail-list ~ .mail-list ~ .mail-list ~ .mail-list {
+	float: right;
+	min-width: 200px;
+	font-size: 0.7em;
+	font-style: italic;
+}
+.mail-list ~ .mail-list ~ .mail-list ~ .mail-list ~ .mail-list {
+	width: 90%;
+	float: left;
+	text-align: left;
+	font-size: 0.9em;
+	font-style: normal;
+}
+
+img.mail-list-sender-photo {
+	margin-right: 10px;
+	height: 3em;
+	width: 3em;
+}
+
+@media screen and (max-width: 767px) {
+.mail-list ~ .mail-list ~ .mail-list ~ .mail-list {
+	float: left;
+	text-align: left;
+	}
+img.mail-list-sender-photo {
+	margin-right: 10px;
+	height: 4.2em;
+	width: 4.2em;
+	height: 1.3em;
+	width: 1.3em;
+}
+.mail-list ~ .mail-list ~ .mail-list ~ .mail-list ~ .mail-list {
+	width: 100%;
+	float: left;
+	text-align: left;
+}
+}
+@media screen and (min-width: 767px) {
+}
+
+
+
+
 a.mail-list {
 	height: 4em;
 }
-img.mail-list-sender-photo {
-	margin-right: 10px;
-}
-.mail-list ~ .mail-list ~ .mail-list ~ .mail-list {
-	width: 35%;
-}
-.mail-list ~ .mail-list ~ .mail-list ~ .mail-list ~ .mail-list {
-	width: 3%;
-	float: right;
 
-}
+
 .thread-wrapper {
 	border: 1px solid #cccccc;
 }
