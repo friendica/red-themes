@@ -2,6 +2,7 @@ body {
 	background-color: f9f9f9;
 	font-family: Verdana, Arial, sans-serif, courier, serif;
 	font-size: 100%;
+	background-color: #f7f7f7;
 }
 a {
 	color: gray;
@@ -69,6 +70,9 @@ aside#region_1 {
 }
 div [id^="g"] { 
 	background-color: #e1e1e1; 
+}
+img {
+	border: 1px solid #cccccc;
 }
 #profile-jot-wrapper {
 	background-color: white;
@@ -196,14 +200,20 @@ div [id^="g"] {
 }
 .mail-list  {
 	font-size: 0.9em;
+	overflow: none;
 }
 .mail-list ~ .mail-list {
-	width: 10%;
+	width: 80%;
 }
 .mail-list ~ .mail-list ~ .mail-list {
-	width: 40%;
+	width: 50%;
 }
-
+a.mail-list {
+	height: 4em;
+}
+img.mail-list-sender-photo {
+	margin-right: 10px;
+}
 .mail-list ~ .mail-list ~ .mail-list ~ .mail-list {
 	width: 35%;
 }
