@@ -93,7 +93,12 @@
 
 			{{if $item.bookmark}}
 			<a href="#" id="bookmark-{{$item.id}}" onclick="itemBookmark({{$item.id}}); return false;" class="icon bookmark item-tool" title="{{$item.bookmark}}"></a>
- 			{{/if}}					
+ 			{{/if}}	
+
+			{{if $item.addtocal}}
+			<a href="#" id="event-{{$item.id}}" onclick="itemAddToCal({{$item.id}}); return false;" class="icon event item-tool"></a>
+			{{/if}}
+				
 			{{if $item.toplevel}}
 			<div class="wall-item-full-screen" id="wall-item-full-screen={{$item.id}}"><a href="display/{{$item.rawmid}}"><img src="view/theme/apw/img/fullscreen.png"></a></div>
 			{{/if}}

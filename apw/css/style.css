@@ -3082,6 +3082,10 @@ display: none;
 .encrypt { background-position: -16px -32px; }
 .expire {background-position: -80px -48px;}
 .bookmark {background-position: -96px -32px}
+.event {background-image: url('../img/events.png');
+	margin-left: 15px;
+	float: left;}
+
 .matrix-icon {background-image: url('../img/$iconpath/matrix.png');
 height: $iconsize;
 width: $iconsize;
