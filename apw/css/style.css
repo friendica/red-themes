@@ -147,22 +147,6 @@ nav {
 
 
 
-#langselector {
-	position: fixed; 
-	top: 3px; 
-	left: 5px; 
-	z-index:9999;
-	opacity: 0.3;
-	filter:alpha(opacity=30);
-
-
-}
-#langselector:hover {
-	opacity: 1.0;
-	filter:alpha(opacity=100);
-}
-
-
 nav #site-location {
 	color: #888a85;
 	font-size: 0.8em;
@@ -318,15 +302,6 @@ footer {
 	padding-right: 3em; 
 	position: fixed;
 	bottom: 1px;
-}
-
-#powered-by {
-	position: fixed;
-	bottom: 1px;
-	left: 15px;
-	opacity: 0.3;
-	filter:alpha(opacity=30);
-
 }
 
 .birthday-today, .event-today {
@@ -889,7 +864,9 @@ footer {
 	margin-left: 50px;
 }
 
-/* Give the top level post bigger shadows than the comments.  This makes them appear "higher" and the comments "lower", which separates posts from each other reasonably without literally drawing a line under it */
+/* Give the top level post bigger shadows than the comments.  This makes them appear "higher" 
+and the comments "lower", which separates posts from each other reasonably without literally 
+drawing a line under it */
 
 .wall-item-content-wrapper {
 	margin-top: 10px;
@@ -1239,9 +1216,7 @@ display: none;
 }
 
 #jot-preview-link {
-	float: right;/*
 	margin-left: 45px;
-	margin-top: 0px !important; */
 }
 
 
@@ -2274,10 +2249,6 @@ a.mail-list-link {
   right: 5px;
 }
 
-.sparkle {
-	cursor: url('../img/$iconpath/lock.cur'), pointer;
-}
-
 #vcard-end {
 	clear: both;
 }
@@ -2456,10 +2427,6 @@ a.mail-list-link {
 #event-summary {
 	width: 400px;
 }
-
-/*.vevent {
-	border: 1px solid #CCCCCC;
-}*/
 
 .vevent {
   background: -moz-radial-gradient(#2e2f2e, #000);
@@ -2802,21 +2769,6 @@ width: 80%;
 }
 #item-delete-selected-desc:hover {
 	text-decoration: underline;
-}
-
-#lang-select-icon {
-	cursor: pointer;
-	position: absolute;
-	left: 4px;
-/*because of the shape, if this is lined up properly it looks like it's lined up wrong...
-lining it up too high is the only way to make it look correctly aligned.  The human
-brain is weird like that */
-	top: 2px;
-}
-
-#lang-select-icon:hover {
-	opacity: 1;
-	filter:alpha(opacity=100);
 }
 
 .notif-image {
@@ -3867,12 +3819,7 @@ padding-top: 20px;
 
 .nav-links {margin-top: 5px;}
 
-div#zot-follow {color: #fff;
-                margin-top: 10px;
-                font-weight: 1.5em;}
 front-page-title {color: #033;}
-
-div#dont-got-zot {color: #fff;}
 
 .rconnect {
         display: block;
