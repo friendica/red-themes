@@ -1216,7 +1216,7 @@ display: none;
 }
 
 #jot-preview-link {
-	margin-left: 45px;
+	float: right;
 }
 
 
