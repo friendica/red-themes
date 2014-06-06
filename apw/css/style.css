@@ -3903,3 +3903,26 @@ button.delete-app {
 }
 
 
+/* Compatibilty layer. 
+
+Templates requiring these are not shipped with this theme, but do exist
+
+Please do not remove. 
+*/
+
+.hideme {
+display: none;
+}
+
+.seriouslyhideme {
+display: none !important;
+}
+
+.forceunhide {
+display: block !important;
+}
+
+.full {
+width: 100%;
+height: 100%;
+}
