@@ -9,7 +9,7 @@ head_add_css('library/jslider/css/jslider.css');
 head_add_css('view/theme/apw/lib/prettyphoto/css/prettyPhoto.css');
 head_add_css('library/colorbox/colorbox.css');
 
-// head_add_css('library/font_awesome/css/font-awesome.min.css');
+head_add_css('library/font_awesome/css/font-awesome.min.css');
 head_add_css('view/css/widgets.css');
 
 head_add_js('jquery.js');

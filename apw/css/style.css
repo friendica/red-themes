@@ -3136,7 +3136,7 @@ width: $iconsize;
 }
 [class^="icon-"],
 [class*="icon-"] {
-font-family: none;
+/*font-family: none; */
 cursor: pointer;
 }
 .editicon {
