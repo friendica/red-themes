@@ -700,6 +700,10 @@ function updateConvItems(mode,data) {
 		liking = 1;
 	}
 
+	function doprofilelike(ident,verb) {
+		$.get('like/' + ident + '?verb=' + verb, function() { window.location.href=window.location.href; });
+	}
+
 	function dosubthread(ident) {
 		unpause();
 		$('#like-rotator-' + ident.toString()).spin('tiny');
