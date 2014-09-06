@@ -13,4 +13,6 @@
 
 <div class="directory-end"></div>
 
+{{$next}}
+
 </div>
