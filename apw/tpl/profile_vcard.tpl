@@ -57,5 +57,9 @@
 
 {{$contact_block}}
 
+        {{if $diaspora}}
+        {{include file="diaspora_vcard.tpl"}}
+        {{/if}}
+
 </div>
 
