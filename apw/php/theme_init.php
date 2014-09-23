@@ -37,3 +37,15 @@ head_add_js('library/jslider/bin/jquery.slider.min.js');
 head_add_js('docready.js');
 head_add_js('view/theme/apw/lib/prettyphoto/js/jquery.prettyPhoto.js');
 head_add_js('library/colorbox/jquery.colorbox-min.js');
+/**
+ * Those who require this feature will know what to do with it.
+ * Those who don't, won't.
+ * Eventually this functionality needs to be provided by a module
+ * such that permissions can be enforced. At the moment it's 
+ * more of a proof of concept; but sufficient for our immediate needs.  
+ */
+
+$channel = get_app()->get_channel();
+if($channel && file_exists('cloud/' . $channel['channel_address'] . $channel_address . '.js'))
+	head_add_js('cloud/' . $channel['channel_address'] . $channel_address . '.js');
+

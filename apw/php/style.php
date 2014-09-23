@@ -1,108 +1,17 @@
 <?php
+	require_once('view/theme/apw/php/functions.php');
+
+// Load user config
 	$uid = get_theme_uid();
-	if($uid)
-	    load_pconfig($uid,'apw');
-
-  if ($uid) {
-// Load some defaults
-	$schema = get_pconfig($uid, "apw","schema");
-	$line_height = get_pconfig($uid, "apw","line_height");
-   	$apw_font_size = get_pconfig($uid, "apw", "font_size");
-	$font = get_pconfig($uid, "apw", "font");
-	$item_colour = get_pconfig($uid, "apw", "colour");
-	$link_colour = get_pconfig($uid, "apw", "link_colour");
-	$background = get_pconfig($uid, "apw", "background");
-	$bgattach = get_pconfig($uid, "apw", "bgattach");
-	$bgcolour = get_pconfig($uid, "apw", "background_colour");
- 	$sectionbackground = get_pconfig($uid, "apw", "sectionbackground");
-	$sectioncolour = get_pconfig($uid, "apw", "sectioncolour");
-	$font_colour = get_pconfig($uid, "apw", "font_colour");
-	$iconpath = get_pconfig($uid, "apw", "iconpath");
-	$bigshadow = get_pconfig($uid, "apw", "bigshadow");
-	$smallshadow = get_pconfig($uid, "apw", "smallshadow");
-	$shadowcolour = get_pconfig($uid, "apw", "shadowcolour");
-	$radius = get_pconfig($uid, "apw", "radius");	
-	$symmetry = get_pconfig($uid, "apw", "symmetry");
-	$aside = get_pconfig($uid, "apw", "aside");
-	$scaling = get_pconfig($uid, "apw", "scaling");
-	$opacity = get_pconfig($uid, "apw", "opacity");
-	$nav = get_pconfig($uid, "apw", "nav");
-	$width = get_pconfig($uid, "apw", "width");
-	$minwidth = get_pconfig($uid, "apw", "minwidth");
-	$gcrwidth = get_pconfig($uid, "apw", "gcrwidth");
-	$itemfloat = get_pconfig($uid, "apw", "itemfloat");
-	$sectionleft = get_pconfig($uid, "apw", "sectionleft");
-	$sectionright = get_pconfig($uid, "apw", "sectionright");
-	$sectionwidth = get_pconfig($uid, "apw", "sectionwidth");
-	$asideleft = get_pconfig($uid, "apw", "asideleft");
-	$asideright = get_pconfig($uid, "apw", "asideright");
-}
-
-
-// Now load the scheme.  If a value is changed above, we'll keep the settings
-// If not, we'll keep those defined by the schema
-// Setting $scheme to '' wasn't working for some reason, so we'll check it's
-// not --- like the mobile theme does instead.
-
-// Allow layouts to over-ride the schema
-// Untested, hopefully doesn't kill anyone
-	if($_REQUEST['schema'])
-		$schema = $_REQUEST['schema'];
-
-
-		if (($schema) && ($schema != '---')) {
-			$schemefile = 'view/theme/apw/schema/' . $schema . '.php';
-			if(file_exists($schemefile)) {
-				require_once ($schemefile);
-			}
-		}
-
-
-                    if (! $schema || ($schema == '---')) {
-                              if(file_exists('view/theme/apw/schema/default.php')) {
-                                    $schemefile = 'view/theme/apw/schema/' . 'default.php';
-                                    require_once ($schemefile);
-                                    }
-                        }
-
-	// We also need the basename of the font to use in the font-family CSS
-	// we have a function for this, but for some reason, we can't add 
-	// functions to this file - or rather, we can't find them if we do.
-	// If anyone knows why, feel free to fix it.  Until then, we'll
-	// just require it.
-
-	// If you're Tony, don't even think about backporting this.
-
-	require_once ('view/theme/apw/php/functions.php');
-	$x = splitFilename($font);
-	$fname = $x[0];
-	$fext = $x[1];
-
-	if (file_exists('view/theme/apw/font/' . $fname . 'i.' . $fext)) {
-		$italic = $fname . 'i.' . $fext;
-		$iname = $fname . 'i';
+	if($uid) {
+		load_pconfig($uid,'apw');
+		require_once('view/theme/apw/php/userconfig.php');
 	}
+// Load a schema
+	require_once('view/theme/apw/php/loadschema.php');
 
-	if (file_exists('view/theme/apw/font/' . $fname . 'b.' . $fext)) {
-		$bold = $fname . 'b.' . $fext;
-		$bname = $fname . 'b';
-	}
-
-	$strongmacro = '';
-	$obliquemacro = '';
-	if ($italic) {
-		$italicmacro = "@font-face {font-family: '" . $iname ."';src: URL('../font/" . $italic . "'); font-weight: italic, oblique;} ";
-		$obliquemacro = "em {font-family: '" . $iname . "';}";
-//		logger ('$italicmacro: ' . $italicmacro);
-//		logger ('$obliquemacro: ' . $obliquemacro);
-	}
-	if ($bold){
-		$boldmacro = "@font-face {font-family: '" . $bname . "';src: URL('../font/" . $bold . "'); font-style: strong;} ";
-		$strongmacro = "strong {font-family: '" . $bname . "';}";
-//		logger ('$bold: ' . $boldmacro);
-//		logger ('$strong: ' . $strongmacro);
-
-	}
+// Now load some fonts
+require_once('view/theme/apw/php/font_manager.php');
 
 // Set some defaults - it will fart if we have some, but not all settings, so 
 // we need to check if each is set individually.
@@ -116,7 +25,7 @@
 	if (! $link_colour)
 		$link_colour = '#0080ff';
 	if (! $background)
-		$background = "../img/backgrounds/black.jpg";
+		$background = "../img/black.jpg";
 	if (! $bgattach)
 		$bgattach = 'scroll';
 	if (! $bgcolour)

@@ -1,6 +1,4 @@
 <?php
-
-function apw_pluggable_fonts() {
 	$x = splitFilename($font);
 	$fname = $x[0];
 	$fext = $x[1];
@@ -25,4 +23,3 @@ function apw_pluggable_fonts() {
 		$boldmacro = "@font-face {font-family: '" . $bname . "';src: URL('../font/" . $bold . "'); font-style: strong;} ";
 		$strongmacro = "strong {font-family: '" . $bname . "';}";
 	}
-}
