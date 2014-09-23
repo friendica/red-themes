@@ -1052,6 +1052,7 @@ width: 100%;
 .wall-item-content {
 	margin-left: 25px;
 	padding-top: 15px;
+    clear: both;
 }
 
 .wall-item-content img {
