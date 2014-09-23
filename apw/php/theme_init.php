@@ -45,7 +45,3 @@ head_add_js('library/colorbox/jquery.colorbox-min.js');
  * more of a proof of concept; but sufficient for our immediate needs.  
  */
 
-$channel = get_app()->get_channel();
-if($channel && file_exists('cloud/' . $channel['channel_address'] . $channel_address . '.js'))
-	head_add_js('cloud/' . $channel['channel_address'] . $channel_address . '.js');
-

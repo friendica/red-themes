@@ -1,0 +1,33 @@
+<?php
+        $schema = get_pconfig($uid, "apw","schema");
+        $line_height = get_pconfig($uid, "apw","line_height");
+        $apw_font_size = get_pconfig($uid, "apw", "font_size");
+        $font = get_pconfig($uid, "apw", "font");
+        $item_colour = get_pconfig($uid, "apw", "colour");
+        $link_colour = get_pconfig($uid, "apw", "link_colour");
+        $background = get_pconfig($uid, "apw", "background");
+        $bgattach = get_pconfig($uid, "apw", "bgattach");
+        $bgcolour = get_pconfig($uid, "apw", "background_colour");
+        $sectionbackground = get_pconfig($uid, "apw", "sectionbackground");
+        $sectioncolour = get_pconfig($uid, "apw", "sectioncolour");
+        $font_colour = get_pconfig($uid, "apw", "font_colour");
+        $iconpath = get_pconfig($uid, "apw", "iconpath");
+        $bigshadow = get_pconfig($uid, "apw", "bigshadow");
+        $smallshadow = get_pconfig($uid, "apw", "smallshadow");
+        $shadowcolour = get_pconfig($uid, "apw", "shadowcolour");
+        $radius = get_pconfig($uid, "apw", "radius");   
+        $symmetry = get_pconfig($uid, "apw", "symmetry");
+        $aside = get_pconfig($uid, "apw", "aside");
+        $scaling = get_pconfig($uid, "apw", "scaling");
+        $opacity = get_pconfig($uid, "apw", "opacity");
+        $nav = get_pconfig($uid, "apw", "nav");
+        $width = get_pconfig($uid, "apw", "width");
+        $minwidth = get_pconfig($uid, "apw", "minwidth");
+        $gcrwidth = get_pconfig($uid, "apw", "gcrwidth");
+        $itemfloat = get_pconfig($uid, "apw", "itemfloat");
+        $sectionleft = get_pconfig($uid, "apw", "sectionleft");
+        $sectionright = get_pconfig($uid, "apw", "sectionright");
+        $sectionwidth = get_pconfig($uid, "apw", "sectionwidth");
+        $asideleft = get_pconfig($uid, "apw", "asideleft");
+        $asideright = get_pconfig($uid, "apw", "asideright");
+
