@@ -1,4 +1,7 @@
 <?php
+	require_once ('view/theme/apw/php/functions.php');
+	require_once ('view/theme/apw/php/font_manager.php');
+
 	$uid = get_theme_uid();
 	if($uid)
 	    load_pconfig($uid,'apw');
@@ -38,6 +41,7 @@
 	$asideright = get_pconfig($uid, "apw", "asideright");
 }
 
+apw_pluggable_fonts();
 
 // Now load the scheme.  If a value is changed above, we'll keep the settings
 // If not, we'll keep those defined by the schema
@@ -65,44 +69,6 @@
                                     }
                         }
 
-	// We also need the basename of the font to use in the font-family CSS
-	// we have a function for this, but for some reason, we can't add 
-	// functions to this file - or rather, we can't find them if we do.
-	// If anyone knows why, feel free to fix it.  Until then, we'll
-	// just require it.
-
-	// If you're Tony, don't even think about backporting this.
-
-	require_once ('view/theme/apw/php/functions.php');
-	$x = splitFilename($font);
-	$fname = $x[0];
-	$fext = $x[1];
-
-	if (file_exists('view/theme/apw/font/' . $fname . 'i.' . $fext)) {
-		$italic = $fname . 'i.' . $fext;
-		$iname = $fname . 'i';
-	}
-
-	if (file_exists('view/theme/apw/font/' . $fname . 'b.' . $fext)) {
-		$bold = $fname . 'b.' . $fext;
-		$bname = $fname . 'b';
-	}
-
-	$strongmacro = '';
-	$obliquemacro = '';
-	if ($italic) {
-		$italicmacro = "@font-face {font-family: '" . $iname ."';src: URL('../font/" . $italic . "'); font-weight: italic, oblique;} ";
-		$obliquemacro = "em {font-family: '" . $iname . "';}";
-//		logger ('$italicmacro: ' . $italicmacro);
-//		logger ('$obliquemacro: ' . $obliquemacro);
-	}
-	if ($bold){
-		$boldmacro = "@font-face {font-family: '" . $bname . "';src: URL('../font/" . $bold . "'); font-style: strong;} ";
-		$strongmacro = "strong {font-family: '" . $bname . "';}";
-//		logger ('$bold: ' . $boldmacro);
-//		logger ('$strong: ' . $strongmacro);
-
-	}
 
 // Set some defaults - it will fart if we have some, but not all settings, so 
 // we need to check if each is set individually.
