@@ -100,9 +100,8 @@
 			<a href="#" id="event-{{$item.id}}" onclick="itemAddToCal({{$item.id}}); return false;" class="icon event item-tool"></a>
 			{{/if}}
 				
-			{{if $item.toplevel}}
-			<div class="wall-item-full-screen" id="wall-item-full-screen={{$item.id}}"><a href="display/{{$item.rawmid}}"><img src="view/theme/apw/img/fullscreen.png"></a></div>
-			{{/if}}
+            <br/>
+
 			<div id="like-rotator-{{$item.id}}" class="like-rotator"></div>
 			<div class="wall-item-delete-wrapper" id="wall-item-delete-wrapper-{{$item.id}}" >
 				{{if $item.drop.dropping}}<a href="item/drop/{{$item.id}}" onclick="return confirmDelete();" class="icon drophide" title="{{$item.drop.delete}}" onmouseover="imgbright(this);" onmouseout="imgdull(this);" ></a>{{/if}}
