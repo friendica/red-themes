@@ -3903,6 +3903,18 @@ button.delete-app {
 	vertical-align: middle; 
 }
 
+.wall-item-list-comments{
+    font-weight: bold;
+    font-size: 1.2em;
+    height: auto;
+    width: auto;
+    background-color: #111;
+    border-radius: $radius;
+    box-shadow: $smallshadow $shadowcolour;
+    margin-right: 8px;
+    padding: 4px;
+    border: none;
+}
 
 /* Compatibilty layer. 
 

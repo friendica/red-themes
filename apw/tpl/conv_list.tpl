@@ -48,7 +48,7 @@
 		<div class="wall-item-content" id="wall-item-content-{{$item.id}}" >
 			<div class="wall-item-title" id="wall-item-title-{{$item.id}}">{{$item.title}}</div>
 			<div class="wall-item-title-end"></div>
-			<div class="wall-item-body" id="wall-item-body-{{$item.id}}" >{{$item.body}}
+			<div class="wall-item-listbody" id="wall-item-body-{{$item.id}}" >{{$item.body}}
 					<div class="body-tag">
 						{{foreach $item.tags as $tag}}
 							<span class='tag'>{{$tag}}</span>
@@ -99,9 +99,8 @@
 			{{if $item.addtocal}}
 			<a href="#" id="event-{{$item.id}}" onclick="itemAddToCal({{$item.id}}); return false;" class="icon event item-tool"></a>
 			{{/if}}
-				
-            <br/>
 
+			<br/>
 			<div id="like-rotator-{{$item.id}}" class="like-rotator"></div>
 			<div class="wall-item-delete-wrapper" id="wall-item-delete-wrapper-{{$item.id}}" >
 				{{if $item.drop.dropping}}<a href="item/drop/{{$item.id}}" onclick="return confirmDelete();" class="icon drophide" title="{{$item.drop.delete}}" onmouseover="imgbright(this);" onmouseout="imgdull(this);" ></a>{{/if}}
@@ -109,8 +108,8 @@
 				{{if $item.drop.pagedrop}}<input type="checkbox" onclick="checkboxhighlight(this);" title="{{$item.drop.select}}" class="item-select" name="itemselected[]" value="{{$item.id}}" />{{/if}}
 			<div class="wall-item-delete-end"></div>
 
-<div class="wall-item-list-comments btn-group"><button class="btn btn-default btn-sm" onclick="window.location.href='{{$item.llink}}'; return false;">{{$item.comment_count_txt}}{{if $item.unseen_comments}}
-<span class="unseen-wall-indicator-{{$item.id}}">, {{$item.list_unseen_txt}}{{/if}}</span></button></div></span>
+			<div class="wall-item-list-comments"><a href="$item.llink}}">{{$item.comment_count_txt}}{{if $item.list_unseen_txt}}, {{$item.list_unseen_txt}}{{/if}}</div>
+
 
 			<div class="wall-item-like {{$item.indent}}" id="wall-item-like-{{$item.id}}">{{$item.showlike}}</div>
 			<div class="wall-item-dislike {{$item.indent}}" id="wall-item-dislike-{{$item.id}}">{{$item.showdislike}}</div>
