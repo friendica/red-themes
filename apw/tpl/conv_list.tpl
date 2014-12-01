@@ -108,7 +108,7 @@
 				{{if $item.drop.pagedrop}}<input type="checkbox" onclick="checkboxhighlight(this);" title="{{$item.drop.select}}" class="item-select" name="itemselected[]" value="{{$item.id}}" />{{/if}}
 			<div class="wall-item-delete-end"></div>
 
-			<div class="wall-item-list-comments"><a href="$item.llink}}">{{$item.comment_count_txt}}{{if $item.list_unseen_txt}}, {{$item.list_unseen_txt}}{{/if}}</div>
+			<div class="wall-item-list-comments"><a href="{{$item.llink}}">{{$item.comment_count_txt}}{{if $item.list_unseen_txt}}, {{$item.list_unseen_txt}}{{/if}}</div>
 
 
 			<div class="wall-item-like {{$item.indent}}" id="wall-item-like-{{$item.id}}">{{$item.showlike}}</div>
