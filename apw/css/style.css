@@ -3908,7 +3908,7 @@ button.delete-app {
     font-size: 1.2em;
     height: auto;
     width: auto;
-    background-color: #111;
+    background-color: $commentlinkcolour;
     border-radius: $radius;
     box-shadow: $smallshadow $shadowcolour;
     margin-right: 8px;

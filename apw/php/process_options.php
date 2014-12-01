@@ -25,6 +25,7 @@ $options = array (
 	'$background' => $background,
 	'$bgattach' => $bgattach,
 	'$bgcolour' => $bgcolour,
+	'$commentlinkcolour' => $commentlinkcolour,
 	'$sectionbackground' => $sectionbackground,
 	'$sectioncolour' => $sectioncolour,
 	'$scaling' => $scaling,

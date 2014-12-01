@@ -16,6 +16,8 @@
 		$bgattach = 'scroll';
 	if (! $bgcolour)
 		$bgcolour = '#000';
+	if (! $commentlinkcolour)
+		$commentlinkcolour = '#000';
 	if (! $sectionbackground)
 		$sectionbackground = '';
 	if (! $sectioncolour)

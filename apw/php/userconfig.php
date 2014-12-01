@@ -8,6 +8,7 @@
         $background = get_pconfig($uid, "apw", "background");
         $bgattach = get_pconfig($uid, "apw", "bgattach");
         $bgcolour = get_pconfig($uid, "apw", "background_colour");
+        $commentlinkcolour = get_pconfig($uid, "apw", "commentlinkcolour");
         $sectionbackground = get_pconfig($uid, "apw", "sectionbackground");
         $sectioncolour = get_pconfig($uid, "apw", "sectioncolour");
         $font_colour = get_pconfig($uid, "apw", "font_colour");
