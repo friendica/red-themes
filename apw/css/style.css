@@ -3123,7 +3123,6 @@ width: $iconsize;
 .icon.dim { opacity: 0.3;filter:alpha(opacity=30); }
 [class^="comment-edit-bb"] {
 	list-style: none;
-	display: none;
 	margin: 0px 0 -5px 0px;
 	padding: 0px;
 }
