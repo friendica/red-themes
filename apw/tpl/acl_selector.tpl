@@ -15,15 +15,11 @@
 </div>
 
 <script>
-$(document).ready(function() {
-	setTimeout( function () {
-		if(typeof acl=="undefined"){
-			acl = new ACL(
-				baseurl+"/acl",
-				[ {{$allowcid}},{{$allowgid}},{{$denycid}},{{$denygid}} ]
-			);
-		}
-	}, 5000 );
-});
+	if(typeof acl=="undefined"){
+		acl = new ACL(
+		baseurl+"/acl",
+		[ {{$allowcid}},{{$allowgid}},{{$denycid}},{{$denygid}} ]
+	);
+	}
 </script>
 
