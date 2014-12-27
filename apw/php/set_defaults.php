@@ -27,7 +27,7 @@
 	if (! $font_colour)
 		$font_colour = '#fff';
 	if (! $iconpath)
-		$iconpath = '../img';
+		$iconpath = '../img/tango';
 	if (! $bigshadow)
 		$bigshadow = '15px 15px 15px';
 	if (! $smallshadow)
