@@ -441,7 +441,7 @@ function updateConvItems(mode,data) {
 				$('#' + prev).after($(this));
 				if(isVisible)
 					showHideComments(itmId);
-				$(".autotime").timeago();
+				$(".autotime",this).timeago();
 				// divgrow doesn't prevent itself from attaching a second (or 500th)
 				// "show more" div to a content region - it also has a few other
 				// issues related to how we're trying to use it. 
@@ -458,7 +458,7 @@ function updateConvItems(mode,data) {
 				$('#' + ident).replaceWith($(this));
 				if(isVisible)
 					showHideComments(itmId);
-				$(".autotime").timeago();
+				$(".autotime",this).timeago();
 				//	$("div.wall-item-body").divgrow({ initialHeight: 400 });
 
 			}
@@ -491,7 +491,7 @@ function updateConvItems(mode,data) {
 				$('#threads-end').before($(this));
 				if(isVisible)
 					showHideComments(itmId);
-				$(".autotime").timeago();
+				$(".autotime",this).timeago();
 				//	$("div.wall-item-body").divgrow({ initialHeight: 400 });
 
 			}
@@ -504,7 +504,7 @@ function updateConvItems(mode,data) {
 				$('#' + ident).replaceWith($(this));
 				if(isVisible)
 					showHideComments(itmId);
-				$(".autotime").timeago();
+				$(".autotime",this).timeago();
 				//	$("div.wall-item-body").divgrow({ initialHeight: 400 });
 			}
 		});
@@ -539,7 +539,7 @@ function updateConvItems(mode,data) {
 				$('#' + prev).after($(this));
 				if(isVisible)
 					showHideComments(itmId);
-				$(".autotime").timeago();
+				$(".autotime",this).timeago();
 
 				//	$("div.wall-item-body").divgrow({ initialHeight: 400 });
 			}
