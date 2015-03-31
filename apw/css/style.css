@@ -1052,6 +1052,7 @@ width: 100%;
 .wall-item-content {
 	margin-left: 25px;
 	padding-top: 15px;
+    clear: both;
 }
 
 .wall-item-content img {
@@ -3122,7 +3123,6 @@ width: $iconsize;
 .icon.dim { opacity: 0.3;filter:alpha(opacity=30); }
 [class^="comment-edit-bb"] {
 	list-style: none;
-	display: none;
 	margin: 0px 0 -5px 0px;
 	padding: 0px;
 }
@@ -3136,7 +3136,7 @@ width: $iconsize;
 }
 [class^="icon-"],
 [class*="icon-"] {
-font-family: none;
+/*font-family: none; */
 cursor: pointer;
 }
 .editicon {
@@ -3902,4 +3902,39 @@ button.delete-app {
 	vertical-align: middle; 
 }
 
+.wall-item-list-comments{
+    font-weight: bold;
+    font-size: 1.2em;
+    height: auto;
+    width: auto;
+    background-color: $commentlinkcolour;
+    border-radius: $radius;
+    box-shadow: $smallshadow $shadowcolour;
+    margin-right: 8px;
+    padding: 4px;
+    border: none;
+}
 
+/* Compatibilty layer. 
+
+Templates requiring these are not shipped with this theme, but do exist
+
+Please do not remove. 
+*/
+
+.hideme {
+display: none;
+}
+
+.seriouslyhideme {
+display: none !important;
+}
+
+.forceunhide {
+display: block !important;
+}
+
+.full {
+width: 100%;
+height: 100%;
+}

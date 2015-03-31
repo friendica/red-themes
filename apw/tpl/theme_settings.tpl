@@ -50,6 +50,8 @@ $(document).ready(function() {
 
 {{include file="field_input.tpl" field=$bgcolour}}
 
+{{include file="field_input.tpl" field=$commentlinkcolour}}
+
 {{include file="field_input.tpl" field=$sectionbackground}}
 
 {{include file="field_input.tpl" field=$sectioncolour}}

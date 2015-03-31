@@ -1,6 +1,5 @@
 <?php
-function splitFilename($filename)
-{
+function splitFilename($filename){
     $pos = strrpos($filename, '.');
     if ($pos === false)
     { // dot is not found in the filename
@@ -13,4 +12,5 @@ function splitFilename($filename)
         return array($basename, $extension);
     }
 }
+
 ?>

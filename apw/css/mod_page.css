@@ -30,7 +30,7 @@ ul.pmenu-body {
 list-style-type: none;
 padding-right: 20px;
 }
-li.pmenu-item, li.pmenu-item a {
+ul.pmenu-item, ul.pmenu-item a {
 -moz-box-shadow:inset 0px 1px 0px 0px #f29c93;
 	-webkit-box-shadow:inset 0px 1px 0px 0px #f29c93;
 	box-shadow:inset 0px 1px 0px 0px #f29c93;
@@ -66,7 +66,7 @@ li.pmenu-item, li.pmenu-item a {
 	text-shadow:1px 1px 0px #b23e35;
 }
 
-li.pmenu-item focus {
+ul.pmenu-item focus {
 background-position: 0 -50px;
 	color: white;
 }

@@ -36,8 +36,8 @@
 			</div>
 		</div>
 		<div class="wall-item-author">
-				{{if $item.verified}}<div class="wall-item-signed"><img src="view/theme/apw/img/signed.png" alt="{{$item.verified}}" title="{{$item.verified}}" height="32" width="32" /></div>
-				{{else}}<div class="wall-item-signed"><img src="view/theme/apw/img/notsigned.png" alt="{{$item.unverified}}" title="{{$item.unverified}}" height="32" width="32" /></div>{{/if}} 
+				{{if $item.verified}}<div class="wall-item-signed"><img src="view/theme/apw/img/signed.png" alt="{{$item.verified}}" title="{{$item.id}} - {{$item.verified}}" height="32" width="32" /></div>
+				{{else}}<div class="wall-item-signed"><img src="view/theme/apw/img/notsigned.png" alt="{{$item.unverified}}" title="{{$item.id}} - {{$item.unverified}}" height="32" width="32" /></div>{{/if}} 
 
 				<a href="{{$item.profile_url}}" title="{{$item.linktitle}}" class="wall-item-name-link"><span class="wall-item-name{{$item.sparkle}}" id="wall-item-name-{{$item.id}}" >{{$item.name}}</span></a>{{if $item.owner_url}} {{$item.to}} <a href="{{$item.owner_url}}" title="{{$item.olinktitle}}" class="wall-item-name-link"><span class="wall-item-name{{$item.osparkle}}" id="wall-item-ownername-{{$item.id}}">{{$item.owner_name}}</span></a>{{/if}}<br />
 				<div class="wall-item-ago"  id="wall-item-ago-{{$item.id}}"><span class="autotime" title="{{$item.isotime}}">{{$item.localtime}}</span>{{if $item.app}}<span class="item.app">{{$item.str_app}}</span>{{/if}}</div>

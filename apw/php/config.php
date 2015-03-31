@@ -25,6 +25,7 @@ if (!local_user())
 	$background = get_pconfig(local_user(), 'apw', 'background' );
 	$bgattach = get_pconfig(local_user(), 'apw', 'bgattach' );
 	$bgcolour = get_pconfig(local_user(), 'apw', 'background_colour' );
+	$commentlinkcolour = get_pconfig(local_user(), 'apw', 'commentlinkcolour' );
 	$sectionbackground = get_pconfig(local_user(), 'apw', 'sectionbackground' );
 	$sectioncolour = get_pconfig(local_user(), 'apw', 'sectioncolour' );
 	$item_colour = get_pconfig(local_user(), 'apw', 'colour' );
@@ -45,7 +46,7 @@ if (!local_user())
 	$asideleft = get_pconfig(local_user(), 'apw', 'asideleft' );	
 	$asideright = get_pconfig(local_user(), 'apw', 'asideright' );	
 	return apw_form($a, $schema, $font_size, $font, $iconpath, $bigshadow, $smallshadow, $shadowcolour, $radius, $line_height, $background, $bgattach, 
-					$bgcolour, $sectionbackground, $sectioncolour, $item_colour, $link_colour, $width, $minwidth, $gcrwidth, $font_colour, $symmetry, 
+					$bgcolour, $commentlinkcolour, $sectionbackground, $sectioncolour, $item_colour, $link_colour, $width, $minwidth, $gcrwidth, $font_colour, $symmetry, 
 					$aside, $scaling, $opacity, $nav, $itemfloat, $sectionleft, $sectionright, $sectionwidth, $asideleft, $asideright);
 }
 
@@ -88,6 +89,8 @@ function theme_post(&$a) {
 
 		set_pconfig(local_user(), 'apw', 'background_colour', $_POST['apw_background_colour']);	
 
+		set_pconfig(local_user(), 'apw', 'commentlinkcolour', $_POST['apw_commentlinkcolour']);	
+
 		set_pconfig(local_user(), 'apw', 'sectionbackground', $_POST['apw_sectionbackground']);	
 
 		set_pconfig(local_user(), 'apw', 'sectioncolour', $_POST['apw_sectioncolour']);	
@@ -128,7 +131,7 @@ function theme_post(&$a) {
 	}
 }
 
-function apw_form(&$a, $schema, $font_size, $font, $iconpath, $bigshadow, $smallshadow, $shadowcolour, $radius, $line_height, $background, $bgattach, $bgcolour,
+function apw_form(&$a, $schema, $font_size, $font, $iconpath, $bigshadow, $smallshadow, $shadowcolour, $radius, $line_height, $background, $bgattach, $bgcolour, $commentlinkcolour, 
 				$sectionbackground, $sectioncolour, $item_colour, $link_colour, $width, $minwidth, $gcrwidth, $font_colour, $symmetry, $aside, $scaling, 
 				$opacity, $nav, $itemfloat, $sectionleft, $sectionright, $sectionwidth, $asideleft, $asideright) {
 
@@ -269,6 +272,7 @@ function apw_form(&$a, $schema, $font_size, $font, $iconpath, $bigshadow, $small
 		'$background' => array('apw_background', t('Set background image'), $background, '', $backgrounds),	
 		'$bgattach' => array('apw_bgattach', t('Set background attachment'), $bgattach, '', $bgattachs),
 		'$bgcolour' => array('apw_background_colour', t('Set background colour'), $bgcolour, '', $bgcolours),	
+		'$commentlinkcolour' => array('apw_commentlinkcolour', t('Set comment link colour'), $commentlinkcolour, '', $commentlinkcolours),	
 		'$sectionbackground' => array('apw_sectionbackground', t('Set section background image'), $sectionbackground, '', $sectionbackgrounds),	
 		'$sectioncolour' => array('apw_sectioncolour', t('Set section background colour'), $sectioncolour, '', $sectioncolour),	
 		'$item_colour' => array('apw_item_colour', t('Set colour of items - use hex'), $item_colour, '', $item_colours),

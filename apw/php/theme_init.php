@@ -9,7 +9,7 @@ head_add_css('library/jslider/css/jslider.css');
 head_add_css('view/theme/apw/lib/prettyphoto/css/prettyPhoto.css');
 head_add_css('library/colorbox/colorbox.css');
 
-// head_add_css('library/font_awesome/css/font-awesome.min.css');
+head_add_css('library/font_awesome/css/font-awesome.min.css');
 head_add_css('view/css/widgets.css');
 
 head_add_js('jquery.js');
@@ -37,3 +37,11 @@ head_add_js('library/jslider/bin/jquery.slider.min.js');
 head_add_js('docready.js');
 head_add_js('view/theme/apw/lib/prettyphoto/js/jquery.prettyPhoto.js');
 head_add_js('library/colorbox/jquery.colorbox-min.js');
+/**
+ * Those who require this feature will know what to do with it.
+ * Those who don't, won't.
+ * Eventually this functionality needs to be provided by a module
+ * such that permissions can be enforced. At the moment it's 
+ * more of a proof of concept; but sufficient for our immediate needs.  
+ */
+
